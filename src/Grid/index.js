@@ -16,8 +16,8 @@ function shuffleArray(array) {
 
 const Grid = ({ classes }) => {
   const displayCalendarDoors = () =>
-    shuffleArray(getCalendar()).map((x, i) => (
-      <CalendarDoor key={x.Tag} data={x} />
+    shuffleArray(getCalendar()).map((x) => (
+      <CalendarDoor key={x.day} data={x} />
     ));
 
   return (
