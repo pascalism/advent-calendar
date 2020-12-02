@@ -1,4 +1,3 @@
-import background from '../newbackground.gif';
 export default {
   Container: {
     display: 'flex',
@@ -14,13 +13,5 @@ export default {
     flex: 1,
     overflow: 'scroll',
     justifyContent: 'center',
-  },
-  Background: {
-    backgroundImage: `url(${background})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    height: '100%',
-    width: '100%',
   },
 };

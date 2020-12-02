@@ -5,15 +5,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: 'rgb(230,210,210)';
+  background-color: #fbdbdf;
+  background-image: url('newbackground.gif');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
+@media only screen and (max-width: 667px) {
+  body {
+    background-repeat: repeat;
+  }
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-@font-face {
-  font-family: 'Christmas';
-  src: local('Christmas'), url('./SnowyChristmas.otf') format('otf');
 }

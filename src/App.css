@@ -10,7 +10,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #fbdbdf;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,11 +22,6 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@font-face {
-  font-family: 'Christmas';
-  src: local('Christmas'), url('./SnowyChristmas.otf') format('otf');
 }
 
 @keyframes App-logo-spin {
