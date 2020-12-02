@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -26,6 +22,11 @@
 
 .App-link {
   color: #61dafb;
+}
+
+@font-face {
+  font-family: 'Christmas';
+  src: local('Christmas'), url('./SnowyChristmas.otf') format('otf');
 }
 
 @keyframes App-logo-spin {
