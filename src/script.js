@@ -6,16 +6,13 @@ for (let index = 0; index < 24; index++) {
   days.push(index);
 }
 
-const getPresenter = (day, receiver, add, acc) => {
-  if (
+const getPresenter = (day, receiver, add, acc) =>
+  !(
     receiver === PRESENTERS[(day + add) % 3] ||
     (acc.length >= 3 && acc[day - 3].presenter === PRESENTERS[(day + add) % 3])
-  ) {
-    return getPresenter(day, receiver, ++add, acc);
-  } else {
-    return PRESENTERS[(day + add) % 3];
-  }
-};
+  )
+    ? PRESENTERS[(day + add) % 3]
+    : getPresenter(day, receiver, ++add, acc);
 
 const getCalendar = () =>
   days
@@ -26,12 +23,9 @@ const getCalendar = () =>
       acc.push({ day, receiver, presenter });
       return acc;
     }, [])
-    .map((x) => {
-      return {
-        Tag: x.day + 1,
-        Empfänger: x.receiver,
-        Verschenker: x.presenter,
-      };
-    });
+    .map((x) => ({
+      ...x,
+      day: x.day + 1,
+    }));
 
 export default getCalendar;
